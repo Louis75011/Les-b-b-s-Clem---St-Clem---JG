@@ -122,10 +122,6 @@ Tout modifier via l'objet `IMAGES` en haut de `App.tsx` uniquement.
 5. SEO schema.org `ChildCare`
 
 
----
-
-## 1. Identité du projet
-
 | Champ | Valeur |
 |---|---|
 | **Nom affiché** | Jessica Giordano — Assistante Maternelle |
