@@ -121,9 +121,8 @@ function HeroSlideshow() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              i === current ? "bg-white scale-125" : "bg-white/50"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${i === current ? "bg-white scale-125" : "bg-white/50"
+              }`}
           />
         ))}
       </div>
