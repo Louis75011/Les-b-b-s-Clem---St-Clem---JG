@@ -5,18 +5,18 @@
 
 import { ReactNode } from "react";
 import { motion } from "motion/react";
-import { 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Baby, 
-  Heart, 
-  ShieldCheck, 
-  Sun, 
-  Home, 
-  Facebook, 
-  CheckCircle2, 
-  GraduationCap, 
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Baby,
+  Heart,
+  ShieldCheck,
+  Sun,
+  Home,
+  Facebook,
+  CheckCircle2,
+  GraduationCap,
   HandMetal,
   Users
 } from "lucide-react";
@@ -30,7 +30,7 @@ const Section = ({ children, className = "", id = "" }: { children: ReactNode, c
 );
 
 const Card = ({ children, className = "" }: { children: ReactNode, className?: string, key?: string | number }) => (
-  <motion.div 
+  <motion.div
     whileHover={{ y: -5 }}
     className={`bg-[#E4EEF4] rounded-3xl p-8 shadow-sm border border-[#B8CED9]/50 ${className}`}
   >
@@ -57,7 +57,7 @@ export default function App() {
             <a href="#services" className="hover:text-[#D4A854] transition-colors">Services</a>
             <a href="#contact" className="hover:text-[#D4A854] transition-colors">Contact</a>
           </div>
-          <a 
+          <a
             href={`tel:${phoneNumber}`}
             className="bg-[#D4A854] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#b8943e] transition-all shadow-md shadow-[#D4A854]/30 flex items-center gap-2"
           >
@@ -93,8 +93,8 @@ export default function App() {
               Un accueil professionnel et bienveillant pour l'éveil et l'épanouissement de votre enfant dans un cadre sécurisé.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="bg-[#2C3D56] text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#4A6885] transition-all"
               >
                 Prendre contact
@@ -107,17 +107,17 @@ export default function App() {
               </div>
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/5]">
-              <img 
-                src="https://picsum.photos/seed/nursery/800/1000" 
-                alt="Espace de jeu" 
+              <img
+                src="https://picsum.photos/seed/nursery/800/1000"
+                alt="Espace de jeu"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -169,7 +169,7 @@ export default function App() {
             <p className="text-[#4A6885] mb-8 leading-relaxed">
               J'améliore régulièrement mes connaissances par des formations complémentaires : troubles du langage, activités adaptées, accompagnement de l'autisme, et gestion des émotions.
             </p>
-            
+
             <div className="space-y-4">
               {[
                 "Langue des Signes Française (LSF) avec les enfants",
@@ -292,7 +292,7 @@ export default function App() {
             <p className="text-[#B8CED9] mb-12 text-lg">
               Vous cherchez un accueil bienveillant pour votre enfant ? Échangeons sur vos besoins et mon approche.
             </p>
-            
+
             <div className="space-y-8">
               <a href={`tel:${phoneNumber}`} className="flex items-center gap-6 group">
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-[#D4A854] transition-colors">
@@ -303,7 +303,7 @@ export default function App() {
                   <p className="text-2xl font-bold">{phoneNumber}</p>
                 </div>
               </a>
-              
+
               <div className="flex items-center gap-6">
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
                   <MapPin size={28} />
@@ -325,17 +325,17 @@ export default function App() {
               </a>
             </div>
           </div>
-          
+
           <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
             <h3 className="text-xl font-bold mb-6">Localisation</h3>
             <div className="aspect-video bg-[#4A6885]/30 rounded-2xl overflow-hidden relative">
               {/* Placeholder for map */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-stone-500 p-6 text-center">
                 <MapPin size={48} className="mb-4 opacity-20" />
-                <p className="text-sm">4 Rue du Pré l'Etang<br/>Lotissement la Roussille<br/>19700 SAINT CLEMENT</p>
+                <p className="text-sm">4 Rue du Pré l'Etang<br />Lotissement la Roussille<br />19700 SAINT CLEMENT</p>
               </div>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.123456789!2d1.7345!3d45.3456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f8976543210:0x123456789abcdef!2s4%20Rue%20du%20Pr%C3%A9%20l'Etang%2C%2019700%20Saint-Cl%C3%A9ment!5e0!3m2!1sfr!2sfr!4v1234567890" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.123456789!2d1.7345!3d45.3456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f8976543210:0x123456789abcdef!2s4%20Rue%20du%20Pr%C3%A9%20l'Etang%2C%2019700%20Saint-Cl%C3%A9ment!5e0!3m2!1sfr!2sfr!4v1234567890"
                 className="w-full h-full border-0 grayscale invert opacity-50"
                 allowFullScreen
                 loading="lazy"
@@ -344,7 +344,7 @@ export default function App() {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-24 pt-8 border-t border-white/10 text-center text-stone-500 text-sm">
           <p className="text-[#7A9EB8]">© {new Date().getFullYear()} Les bébés Clém - Jessica Giordano. Tous droits réservés.</p>
           <p className="mt-2 text-[#7A9EB8]">Assistante Maternelle Agréée en Corrèze (19)</p>
