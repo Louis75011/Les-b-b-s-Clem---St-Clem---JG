@@ -286,87 +286,7 @@ export default function App() {
       {/* ══════════════════════════════════════
           Hero
       ══════════════════════════════════════ */}
-      <Section id="accueil" className="pt-32 pb-20 overflow-hidden">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Badge agrément */}
-            <div className="inline-flex items-center gap-2 bg-[#D4A854]/15 text-[#D4A854] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
-              <ShieldCheck size={14} />
-              Agréée depuis 2011 · Corrèze
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-[#2C3D56] leading-[1.1] mb-4">
-              Assistante<br />
-              <span className="text-[#D4A854]">Maternelle</span>
-            </h1>
-            <p className="text-2xl font-semibold text-[#4A6885] mb-1">à Saint-Clément (19700)</p>
-            <p className="text-[#7A9EB8] text-sm uppercase tracking-widest mb-5">
-              Corrèze - Limousin · Accueil à domicile
-            </p>
-            <p className="text-xl italic text-[#4A6885] font-medium mb-6">
-              "{SITE_DATA.slogan}"
-            </p>
-            <p className="text-lg text-[#4A6885] mb-8 leading-relaxed max-w-xl">
-              J'accompagne les enfants vers l'autonomie et la vie en collectivité à travers des
-              activités adaptées, dans un cadre calme et sécurisé, espaces jeux et dortoir dédiés,
-              du lundi au vendredi.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="bg-[#2C3D56] text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#4A6885] transition-all flex items-center gap-2"
-              >
-                Prendre contact <ChevronRight size={18} />
-              </a>
-              <a
-                href="#services"
-                className="bg-[#E4EEF4] text-[#2C3D56] px-8 py-4 rounded-2xl font-bold hover:bg-[#B8CED9] transition-all border border-[#B8CED9]"
-              >
-                Voir mes services
-              </a>
-            </div>
-            {/* Pastille places dispo */}
-            <div className="mt-5 inline-flex items-center gap-3 px-5 py-3 bg-[#E4EEF4] rounded-2xl border border-[#B8CED9]/50 shadow-sm">
-              <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-[#4A6885]">
-                {SITE_DATA.placesDisponibles} places disponibles actuellement
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Image hero */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <HeroSlideshow />
-            {/* Badge flottant */}
-            <div className="absolute top-8 -left-4 z-20 bg-white rounded-2xl shadow-lg px-4 py-3 border border-[#B8CED9]/50">
-              <p className="text-xs text-[#7A9EB8] font-medium">Agrément PMI</p>
-              <p className="text-sm font-bold text-[#2C3D56]">Corrèze · Depuis 2011</p>
-            </div>
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#D4A854] rounded-full blur-3xl -z-10 pointer-events-none">
-              <motion.div
-                className="w-full h-full"
-                animate={{ scale: [1, 1.35, 1], opacity: [0.3, 0.55, 0.3] }}
-                transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#7A9EB8] rounded-full blur-3xl -z-10 pointer-events-none">
-              <motion.div
-                className="w-full h-full"
-                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1.5 }}
-              />
-            </div>
-          </motion.div>
-        </div>
-      </Section>
+      <HeroSection />
 
       {/* ══════════════════════════════════════
           Stats / Chiffres clés
@@ -379,11 +299,13 @@ export default function App() {
             { icon: MapPin, label: "Localisation", value: "Saint-Clément" },
             { icon: Clock, label: "Accueil", value: "Lun - Ven" },
           ].map((stat, i) => (
-            <Card key={i} className="text-center flex flex-col items-center justify-center py-10">
-              <stat.icon className="text-[#D4A854] mb-4" size={32} />
-              <span className="text-xs font-bold uppercase tracking-widest text-[#7A9EB8] mb-1">{stat.label}</span>
-              <span className="text-xl font-bold text-[#2C3D56]">{stat.value}</span>
-            </Card>
+            <div key={i}>
+              <Card className="text-center flex flex-col items-center justify-center py-10">
+                <stat.icon className="text-[#D4A854] mb-4" size={32} />
+                <span className="text-xs font-bold uppercase tracking-widest text-[#7A9EB8] mb-1">{stat.label}</span>
+                <span className="text-xl font-bold text-[#2C3D56]">{stat.value}</span>
+              </Card>
+            </div>
           ))}
         </div>
       </Section>
